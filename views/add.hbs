@@ -1,0 +1,37 @@
+<div class="w-75 mx-auto">
+    <p class="fs-1">Add product</p>
+    {{#if errorAddProducts}}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Error!</strong> {{errorAddProducts}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {{/if}}
+    <form action="/add-product" method="post">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="title" id="floatingInput" placeholder="Title">
+            <label for="floatingInput">Title</label>
+        </div>
+        <div class="form-floating mb-3">
+            <textarea class="form-control" name="description" style="height: 100px" id="exampleFormControlTextarea1"
+                placeholder="Description" rows="3"></textarea>
+            <label for="floatingPassword">Description</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="image" id="floatingInput" placeholder="Image">
+            <label for="floatingInput">Image</label>
+        </div>
+        <div class="input-group">
+            <span class="input-group-text bg-light">$</span>
+            <div class="form-floating">
+                <input type="number" class="form-control" name="price" id="floatingInputGroup1" placeholder="Price">
+                <label for="floatingInputGroup1">Price</label>
+            </div>
+        </div>
+        <button class="btn mt-3" type="submit">
+            <a class="effect">
+                Add product
+                <span class="bg"></span>
+            </a>
+        </button>
+    </form>
+</div>

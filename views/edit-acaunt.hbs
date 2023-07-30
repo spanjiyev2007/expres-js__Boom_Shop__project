@@ -1,0 +1,23 @@
+<div class="w-75 mx-auto">
+    <p class="fs-1">Edit Acaunt</p>
+    <form action="/editAcaunt" method="post">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" name="email" id="floatingInput" value={{editEmail}} readonly>
+            <label for="floatingInput">Email</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" name="oldPassword" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Old Password</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" name="newPassword" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">New Password</label>
+        </div>
+        <button class="btn mt-3" type="submit">
+            <a class="effect">
+                Update
+                <span class="bg"></span>
+            </a>
+        </button>
+    </form>
+</div>
